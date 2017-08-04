@@ -1,0 +1,8 @@
+<% if user_signed_in? %>
+  <% @items.each do |item| %>
+    <h3><%= item.title %></h3>
+    <%= link_to "", items_show_path, method: :delete, class: 'glyphicon glyphicon-ok' %>
+  <% end %>
+ 
+<% end %>
+<%= link_to "New Item", items_new_path %>
